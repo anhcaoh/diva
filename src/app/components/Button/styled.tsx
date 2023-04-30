@@ -1,11 +1,23 @@
 import Button, { IButton } from "./Button";
 // import styles from "./Button.module.scss";
-// TODO: also can implement styled-components css-in-JS
-const ButtonStyled = ({ size = "md", className, ...rest }: IButton) => {
+// TODO: also can implement styled-components | css-in-JS
+const ButtonStyled = ({
+  size = "md",
+  variant = "filled",
+  className,
+  ...rest
+}: IButton) => {
   return (
     <Button
       className={[
-        "bg-blue-600 hover:bg-blue-500 focus:bg-blue-500 text-white font-medium",
+        " font-medium",
+        variant === 'text' ? 'hover:text-gray-700' : 
+        variant === 'link' ? 'hover:text-gray-700 underline' :
+        variant === "filled"
+          ? "bg-blue-600 hover:bg-blue-500 focus:bg-blue-500 text-white"
+          : variant === "outlined"
+          ? "bg-transparent border-2 border-blue-600 hover:bg-blue-600 text-blue-600 hover:text-white"
+          : "",
         size === "lg"
           ? "py-1 px-3 rounded-md text-lg"
           : size === "sm"

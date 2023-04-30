@@ -1,9 +1,7 @@
-import { ReactNode } from "react";
+import { CoreComponentProps } from "@/app/types";
 
-type ButtonAttrs = React.HTMLAttributes<HTMLButtonElement>;
-export interface IButton extends ButtonAttrs {
-  children?: ReactNode;
-  size?: 'sm' | 'md' | 'lg'
+export interface IButton extends CoreComponentProps<HTMLButtonElement> {
+  variant?: "filled" | "text" | "link" | "contained" | "outlined";
 }
 const Button = ({ children, ...rest }: IButton) => {
   return (
