@@ -1,3 +1,15 @@
+## https://planningdiva.com
+
+## About
+
+Health check dashboard for liveness and readiness probes of Planning Diva API
+
+## Features
+
+- Button for on-demand check of API status
+- Send message to Planning Diva Slack space and
+- Display of response message from API
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
