@@ -3,7 +3,7 @@ import Button from "../components/Button";
 const PlanningDiva = () => {
   return (
     <>
-      <Button>Check</Button>
+      <Button>Medium (Default)</Button>
     </>
   );
 };
