@@ -1,7 +1,7 @@
 import { HTMLAttributes, ReactNode } from "react"
 
-export type CoreComponentProps<T> = 
-HTMLAttributes<T> & {
+export interface CoreComponentType {
   size?: 'sm' | 'md' | 'lg';
   children? : ReactNode;
 }
+export interface ICoreComponent<T> extends CoreComponentType, HTMLAttributes<T> {}

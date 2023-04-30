@@ -1,9 +1,13 @@
 import Button from "../components/Button";
+import Input from "../components/Input";
 
 const PlanningDiva = () => {
   return (
     <>
-      <Button>Medium (Default)</Button>
+      <Button variant="contained" className="mb-3">
+        Medium (Default)
+      </Button>
+      <Input placeholder="Enter something" />
     </>
   );
 };

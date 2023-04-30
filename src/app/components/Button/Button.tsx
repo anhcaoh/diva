@@ -1,6 +1,6 @@
-import { CoreComponentProps } from "@/app/types";
+import { ICoreComponent } from "@/app/types";
 
-export interface IButton extends CoreComponentProps<HTMLButtonElement> {
+export interface IButton extends ICoreComponent<HTMLButtonElement> {
   variant?: "filled" | "text" | "link" | "contained" | "outlined";
 }
 const Button = ({ children, ...rest }: IButton) => {
