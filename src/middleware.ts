@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { decodeJwt } from 'jose';
 import { ACCESS_TOKEN_NAME } from "./constants";
-import { fetchLogin } from "./app/api/login/route";
+import { fetchLogin } from "./app/api/utils";
 export const config = {
   //run middleware on all routes EXCEPT
   // api/login
