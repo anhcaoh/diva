@@ -1,0 +1,5 @@
+POST https://diva-challenge-ul4cm77qva-uc.a.run.app/slack
+Content-Type: "application/json"
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODMwODMzNTF9.conuMm4QJIMggG9332gdUPhyr0k53BzhJDu1XSl9ldg"
+
+{ "text": "Hey there!"}

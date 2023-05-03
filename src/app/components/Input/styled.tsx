@@ -1,7 +1,12 @@
+import { forwardRef } from "react";
 import Input, { IInput } from "./Input";
 // import styles from "./Input.module.scss";
 // TODO: also can implement styled-components | css-in-JS
-const InputStyled = ({ size = "md", className, ...rest }: IInput) => {
+const InputStyled = forwardRef(function InputStyled({
+  size = "md",
+  className,
+  ...rest
+}: IInput) {
   return (
     <Input
       className={[
@@ -18,5 +23,5 @@ const InputStyled = ({ size = "md", className, ...rest }: IInput) => {
       {...rest}
     />
   );
-};
+});
 export default InputStyled;

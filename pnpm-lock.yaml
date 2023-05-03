@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': ^17.6.1
   '@commitlint/config-conventional': ^17.6.1
+  '@types/js-cookie': ^3.0.3
   '@types/node': 18.16.3
   '@types/react': 18.2.0
   '@types/react-dom': 18.2.1
@@ -10,6 +11,8 @@ specifiers:
   eslint: 8.39.0
   eslint-config-next: 13.3.2
   husky: ^8.0.3
+  jose: ^4.14.4
+  js-cookie: ^3.0.5
   next: 13.3.2
   postcss: ^8.4.23
   react: 18.2.0
@@ -24,6 +27,8 @@ dependencies:
   '@types/react-dom': 18.2.1
   eslint: 8.39.0
   eslint-config-next: 13.3.2_iacogk7kkaymxepzhgcbytyi7q
+  jose: 4.14.4
+  js-cookie: 3.0.5
   next: 13.3.2_txdvpvppf2ilsh27xadmwrzlmm
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -34,6 +39,7 @@ dependencies:
 devDependencies:
   '@commitlint/cli': 17.6.1
   '@commitlint/config-conventional': 17.6.1
+  '@types/js-cookie': 3.0.3
   autoprefixer: 10.4.14_postcss@8.4.23
   husky: 8.0.3
   postcss: 8.4.23
@@ -480,6 +486,10 @@ packages:
 
   /@tsconfig/node16/1.0.3:
     resolution: {integrity: sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==}
+    dev: true
+
+  /@types/js-cookie/3.0.3:
+    resolution: {integrity: sha512-Xe7IImK09HP1sv2M/aI+48a20VX+TdRJucfq4vfRVy6nWN8PYPOEnlMRSgxJAgYQIXJVL8dZ4/ilAM7dWNaOww==}
     dev: true
 
   /@types/json5/0.0.29:
@@ -2129,6 +2139,15 @@ packages:
   /jiti/1.18.2:
     resolution: {integrity: sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg==}
     hasBin: true
+    dev: false
+
+  /jose/4.14.4:
+    resolution: {integrity: sha512-j8GhLiKmUAh+dsFXlX1aJCbt5KMibuKb+d7j1JaOJG6s2UjX1PQlW+OKB/sD4a/5ZYF4RcmYmLSndOoU3Lt/3g==}
+    dev: false
+
+  /js-cookie/3.0.5:
+    resolution: {integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==}
+    engines: {node: '>=14'}
     dev: false
 
   /js-sdsl/4.4.0:
