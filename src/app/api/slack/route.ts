@@ -1,19 +1,7 @@
-import { ACCESS_TOKEN_NAME, NEXT_PUBLIC_API } from "@/constants";
-// import type { NextApiResponse } from 'next'
+import { ACCESS_TOKEN_NAME } from "@/constants";
 import { NextRequest, NextResponse } from "next/server";
+import { postSlackMessage } from "../utils";
 
-export async function postSlackMessage(jwt: string, text: string) {
-  return fetch(`${NEXT_PUBLIC_API}/slack`,{
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${jwt}`
-    },
-    body: JSON.stringify({ text })
-  })
-  .then(res => res.text())
-  .catch(error => new Error(error))
-}
 export async function POST(req: NextRequest) {
   const jwt = req.cookies.get(ACCESS_TOKEN_NAME || 'jwt')?.value;
   const text = await req.json() as string;
