@@ -1,3 +1,5 @@
+![App Screenshot](/public/Screenshot.png?raw=true "App screenshot")
+
 ## https://planningdiva.com
 
 ## About
