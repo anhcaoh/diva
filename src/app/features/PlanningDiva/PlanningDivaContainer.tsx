@@ -11,21 +11,23 @@ const withPlanningDiva = (Component: any) => {
       message: string;
     } | null>(null);
     async function checkApiStatus() {
-      let alive;
+      let liveness;
       do {
-        alive = await fetchLiveness();
-        alive !== "alive" && fetchLogin();
-        alive === "alive" && setLiveness(true);
-      } while (alive !== "alive");
+        liveness = await fetchLiveness();
+        liveness !== "alive" && fetchLogin();
+        liveness === "alive" && setLiveness(true);
+      } while (alive === false);
     }
     async function sendSlackMessage(text: string) {
-      let responseMsg;
-      do {
-        responseMsg = await postSlackMessage(text);
-        responseMsg?.message?.includes("expired")
-          ? fetchLogin()
-          : setResponse(responseMsg);
-      } while (responseMsg?.message?.includes("expired"));
+      const responseMsg = await postSlackMessage(text);
+      if (responseMsg) setResponse(responseMsg);
+      // let responseMsg;
+      // do {
+      //   responseMsg = await postSlackMessage(text);
+      //   responseMsg?.message?.includes("expired")
+      //     ? fetchLogin()
+      //     : setResponse(responseMsg);
+      // } while (responseMsg?.message?.includes("expired"));
     }
     return (
       <Component

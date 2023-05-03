@@ -3,7 +3,6 @@ import Cookies from "js-cookie";
 export const fetchLiveness = async () => {
   return fetch("/api/liveness")
     .then((res) => res.text())
-    .then((alive) => alive)
     .catch((error) => new Error(error));
 };
 export const fetchLogin = async () => {
